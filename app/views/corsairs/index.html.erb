@@ -1,11 +1,11 @@
-<h1>Liste des Corsairs</h1>
+<h1><strong><u>Liste des Corsairs</u></strong></h1>
 
 <br/>
 
 <% @corsairs.each do |corsair| %>
-	<h2>Prenom : <%= corsair.first_name %></h2>
+	<h3><strong>Prénom : </strong><%= corsair.first_name %></h3>
 
-	<p>Age : <%= corsair.age %></p>
+	<h3><strong>Âge : </strong><%= corsair.age %></h3>
 	<p>
 		<a href='<%= corsair_path(corsair.id) %>' class='btn btn-primary'>En savoir plus</a>
 	</p>
@@ -14,5 +14,5 @@
 <br/>
 
 <p>
-	<a href='<%= new_corsair_path %>' class='btn btn-success'>Creer un nouveau Corsair</a>
+	<a href='<%= new_corsair_path %>' class='btn btn-success'>Créer un nouveau Corsair</a>
 </p>
