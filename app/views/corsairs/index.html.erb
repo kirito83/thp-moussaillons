@@ -1,0 +1,18 @@
+<h1>Liste des Corsairs</h1>
+
+<br/>
+
+<% @corsairs.each do |corsair| %>
+	<h2>Prenom : <%= corsair.first_name %></h2>
+
+	<p>Age : <%= corsair.age %></p>
+	<p>
+		<a href='<%= corsair_path(corsair.id) %>' class='btn btn-primary'>En savoir plus</a>
+	</p>
+<% end %>
+
+<br/>
+
+<p>
+	<a href='<%= new_corsair_path %>' class='btn btn-success'>Creer un nouveau Corsair</a>
+</p>

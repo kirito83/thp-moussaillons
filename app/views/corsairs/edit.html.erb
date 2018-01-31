@@ -1,0 +1,29 @@
+<h1>Edition du Corsair</h1>
+
+<br/>
+
+<%= form_for @corsair do |f| %>
+  	<div class='form-group'>
+		<label>Prenom</label>
+		<%= f.text_field :first_name, class: 'form-control' %>
+	</div>
+	<div class='form-group'>
+		<label>Age</label>
+		<%= f.text_field :age, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<label>Plutot kebab ou hummus?</label>
+    	<%= f.label :likeness %><br />
+    	<%= f.label :likeness, "Kebab", :value => "kebab"  %>
+    	<%= f.radio_button :likeness, 'kebab'%>
+    	<%= f.label :likeness, "Hummus", :value => "hummus" %>
+    	<%= f.radio_button :likeness, 'hummus', :checked => 'hummus' %>
+  	</div>
+	<br/>
+	<div class='form-group'>
+		<button type='submit' class='btn btn-primary'>Editer le Corsair</button>
+	</div>
+	<div class='form-group'>
+		<a href='<%= corsair_path(@corsair.id) %>' class='btn btn-danger' data-confirm='Etes vous sur?' data-method='DELETE'>Supprimer</a>
+	</div>
+<% end %>

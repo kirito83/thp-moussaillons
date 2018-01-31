@@ -1,0 +1,10 @@
+<h1>Prenom : <%= @corsair.first_name %></h1>
+
+<p>Age : <%= @corsair.age %></p>
+
+<p>Kebab ou Hummus? <%= @corsair.likeness %></p>
+
+<p>
+	<a href='<%= corsairs_path %>' class='btn btn-primary'>Revenir a la liste des Corsairs</a>
+	<a href='<%= edit_corsair_path %>' class='btn btn-warning'>Editer</a>
+</p>
