@@ -42,6 +42,6 @@ class CorsairsController < ApplicationController
 
   private
   def corsair_params
-    params.require(:corsair).permit(:first_name, :age, :likeness, :bio)
+    params.require(:corsair).permit(:first_name, :age, :likeness, :bio, :pseudo_slack, :pseudo_github)
   end
 end

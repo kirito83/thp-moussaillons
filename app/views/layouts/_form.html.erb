@@ -1,0 +1,12 @@
+<% if @corsair.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@corsair.errors.count, "error") %> Le prénom est vide. Veuillez le renseigner svp.
+      </h2>
+      <ul>
+        <% @corsair.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

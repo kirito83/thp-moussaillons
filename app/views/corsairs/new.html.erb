@@ -3,6 +3,7 @@
 <br/>
 
 <%= form_for @corsair do |f| %>
+	<%= render 'layouts/form' %>
   	<div class='form-group'>
 		<label>Prénom</label>
 		<%= f.text_field :first_name, class: 'form-control' %>
